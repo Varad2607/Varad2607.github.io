@@ -1,47 +1,57 @@
-/* General styles remain the same */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #2b2d42;
-    color: #edf2f4;
-    line-height: 1.6;
+/* Navbar styles */
+.navbar {
+    background-color: #1d1f2f;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and navigation */
 }
 
-/* Hero Section */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    color: #edf2f4;
+    margin-right: auto; /* Push the navigation to the right */
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Adds spacing between menu items */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li a {
+    color: #edf2f4;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Hero section */
 .hero {
     display: flex;
     align-items: flex-start;
-    padding: 40px;
-    gap: 20px; /* Space between profile picture and about section */
+    padding: 40px 20px; /* Adds space from the left and right */
+    gap: 30px; /* Space between profile picture and about section */
 }
 
 .hero .profile-picture {
-    flex: 0 0 150px; /* Fixed width for profile picture column */
+    flex: 0 0 200px; /* Fixed width for profile picture column */
+    margin-left: 30px; /* Moves the picture away from the extreme left */
 }
 
 .hero .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 200px; /* Increase profile picture size */
+    height: 200px;
     border-radius: 50%;
     border: 3px solid #edf2f4;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.hero .about-section {
-    flex: 1; /* Takes remaining space */
-}
-
-.hero .about-section h1 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #edf2f4;
-}
-
-.hero .about-section p {
-    margin: 0 0 10px;
-    font-size: 1rem;
-    color: #edf2f4;
 }
 
 /* Details Section: Interests and Education */
@@ -79,17 +89,30 @@ body {
 
 /* Media Query for Responsiveness */
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
     .hero {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 20px;
     }
 
     .hero .profile-picture {
-        margin-bottom: 20px;
+        margin-left: 0;
     }
 
     .details {
         flex-direction: column;
+        padding: 20px;
     }
 }
