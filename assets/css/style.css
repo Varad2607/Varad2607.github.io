@@ -8,22 +8,23 @@ body {
     line-height: 1.6;
 }
 
+/* Navbar styles */
 .navbar {
     background-color: #1d1f2f;
     color: #fff;
     padding: 1rem;
-    text-align: center;
 }
 
 .navbar .nav-links {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Aligns navbar items to the left */
+    margin-left: 20px; /* Adds some spacing from the edge */
 }
 
 .navbar .nav-links li {
-    margin: 0 15px;
+    margin-right: 15px;
 }
 
 .navbar .nav-links a {
@@ -31,16 +32,23 @@ body {
     text-decoration: none;
 }
 
+/* Hero section styles */
 .hero {
-    text-align: center;
-    margin: 20px auto;
+    display: flex; /* Use flexbox to align content */
+    align-items: center; /* Aligns image and text vertically */
+    padding: 20px; /* Adds padding inside the section */
+    margin: 20px; /* Adds spacing around the section */
 }
 
 .hero .profile-pic {
-    width: 150px;
+    width: 150px; /* Adjust size */
     height: 150px;
-    border-radius: 50%;
-    margin-bottom: 15px;
+    border-radius: 50%; /* Makes it circular */
+    margin-right: 20px; /* Adds space between image and text */
+}
+
+.hero .social-icons {
+    margin-top: 10px;
 }
 
 .hero .social-icons a {
@@ -50,6 +58,7 @@ body {
     font-size: 20px;
 }
 
+/* Footer styles */
 footer {
     text-align: center;
     padding: 1rem;
@@ -60,9 +69,15 @@ footer {
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
+        margin-left: 0; /* Center nav links for smaller screens */
+    }
+    .hero {
+        flex-direction: column; /* Stack image and text vertically on small screens */
+        text-align: center; /* Center-align content for small screens */
     }
     .hero .profile-pic {
-        width: 100px;
+        width: 100px; /* Smaller profile picture for mobile */
         height: 100px;
+        margin: 0 auto 15px; /* Center the image */
     }
 }
