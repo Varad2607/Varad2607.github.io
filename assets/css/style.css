@@ -5,7 +5,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2b2d42; /* This sets the dark background color */
+    background-color: #191a29; /* This sets the dark background color */
     color: #edf2f4; /* Light text color for better contrast */
     line-height: 1.6;
 }
@@ -85,7 +85,7 @@ body {
 .interests ul li {
     margin-bottom: 10px;
     font-size: 1rem;
-    color: #1e2325;
+    color: #86969c;
 }
 
 .education p {
@@ -95,7 +95,7 @@ body {
 }
 
 .education strong {
-    color: #edf2f4;
+    color: #161f22;
 }
 
 /* Media Query for Responsiveness */
