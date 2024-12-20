@@ -1,4 +1,4 @@
-/* General styles */
+/* General styles remain the same */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -8,76 +8,88 @@ body {
     line-height: 1.6;
 }
 
-/* Navbar styles */
-.navbar {
-    background-color: #1d1f2f;
-    color: #fff;
-    padding: 1rem;
-}
-
-.navbar .nav-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: flex-start; /* Aligns navbar items to the left */
-    margin-left: 20px; /* Adds some spacing from the edge */
-}
-
-.navbar .nav-links li {
-    margin-right: 15px;
-}
-
-.navbar .nav-links a {
-    color: #edf2f4;
-    text-decoration: none;
-}
-
-/* Hero section styles */
+/* Hero Section */
 .hero {
-    display: flex; /* Use flexbox to align content */
-    align-items: center; /* Aligns image and text vertically */
-    padding: 20px; /* Adds padding inside the section */
-    margin: 20px; /* Adds spacing around the section */
+    display: flex;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 20px; /* Space between profile picture and about section */
+}
+
+.hero .profile-picture {
+    flex: 0 0 150px; /* Fixed width for profile picture column */
 }
 
 .hero .profile-pic {
-    width: 150px; /* Adjust size */
+    width: 150px;
     height: 150px;
-    border-radius: 50%; /* Makes it circular */
-    margin-right: 20px; /* Adds space between image and text */
+    border-radius: 50%;
+    border: 3px solid #edf2f4;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.hero .social-icons {
-    margin-top: 10px;
+.hero .about-section {
+    flex: 1; /* Takes remaining space */
 }
 
-.hero .social-icons a {
-    margin: 0 10px;
+.hero .about-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
     color: #edf2f4;
-    text-decoration: none;
-    font-size: 20px;
 }
 
-/* Footer styles */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: #1d1f2f;
+.hero .about-section p {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    color: #edf2f4;
 }
 
-/* Media query for responsiveness */
+/* Details Section: Interests and Education */
+.details {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    gap: 20px;
+}
+
+.details > div {
+    flex: 1; /* Equal width for both columns */
+}
+
+.interests ul {
+    list-style: none;
+    padding: 0;
+}
+
+.interests ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #edf2f4;
+}
+
+.education p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #edf2f4;
+}
+
+.education strong {
+    color: #edf2f4;
+}
+
+/* Media Query for Responsiveness */
 @media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        margin-left: 0; /* Center nav links for smaller screens */
-    }
     .hero {
-        flex-direction: column; /* Stack image and text vertically on small screens */
-        text-align: center; /* Center-align content for small screens */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    .hero .profile-pic {
-        width: 100px; /* Smaller profile picture for mobile */
-        height: 100px;
-        margin: 0 auto 15px; /* Center the image */
+
+    .hero .profile-picture {
+        margin-bottom: 20px;
+    }
+
+    .details {
+        flex-direction: column;
     }
 }
