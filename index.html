@@ -17,10 +17,20 @@
             background: #000;
             color: #fff;
             z-index: 1000;
+            padding: 10px 0; /* Add padding for better spacing */
+        }
+        .profile {
+            margin-top: 100px; /* Adjust this value to ensure no overlap with navbar */
+            text-align: center;
         }
         .nav-links li a.active {
             font-weight: bold;
             border-bottom: 2px solid #fff;
+        }
+        .profile img {
+            border-radius: 50%;
+            max-width: 150px; /* Adjust size of the profile image */
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -40,7 +50,7 @@
     
     <!-- Home Section -->
     <section id="home" class="hero">
-        <div class="profile-picture">
+        <div class="profile">
             <img src="assets/images/myphoto.png" alt="Profile Picture" class="profile-pic">
         </div>
         <div class="about-section">
