@@ -10,28 +10,112 @@
         html {
             scroll-behavior: smooth; /* Enables smooth scrolling */
         }
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #000;
-            color: #fff;
-            z-index: 1000;
-            padding: 10px 0; /* Add padding for better spacing */
-        }
-        .profile {
-            margin-top: 100px; /* Adjust this value to ensure no overlap with navbar */
-            text-align: center;
-        }
-        .nav-links li a.active {
-            font-weight: bold;
-            border-bottom: 2px solid #fff;
-        }
-        .profile img {
-            border-radius: 50%;
-            max-width: 170px; /* Adjust size of the profile image */
-            margin-top: 30px;
-        }
+        
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    z-index: 1000;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.nav-links li a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+}
+
+.profile {
+    margin-top: 150px; /* Ensure space below navbar */
+    text-align: center;
+    padding: 0 20px;
+}
+
+.profile img {
+    border-radius: 50%;
+    max-width: 170px;
+    margin: 20px auto;
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-section h1 {
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile {
+        margin-top: 120px; /* Adjust for smaller screens */
+    }
+
+    .about-section {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile img {
+        max-width: 130px; /* Smaller profile picture on small screens */
+    }
+
+    .about-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -144,7 +228,7 @@
           <div style="display: flex; align-items: center; gap: 20px;">
             <img src="project2.jpg" alt="Project 2 Image" style="width: 150px; height: auto; border-radius: 8px;">
             <div>
-              <p><strong>Title:</strong> Robotic Arm Control System</p>
+              <p><strong>Title:</strong> Localization, Planning and Control Integration for a mobile robot</p>
               <p><em>Description:</em> Designed a control system for robotic arms using PID and machine learning approaches.</p>
               <p>
                 <a href="code-link2.com" target="_blank">Code</a> |
