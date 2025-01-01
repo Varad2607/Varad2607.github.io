@@ -64,6 +64,14 @@
     span.highlight {
       background-color: #ffffd0;
     }
+    .zoom-img {
+      transition: transform 0.2s;
+    }
+    
+    /* Scale image on hover */
+    .zoom-img:hover {
+      transform: scale(1.2); 
+    }
   </style>
   <title>Varad Dhat</title>
   <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
@@ -92,7 +100,8 @@
               </p>
             </td>
             <td width="28%">
-              <img width="100%" src="images/myphoto.png"
+              <!-- <img width="100%" src="images/myphoto.png" -->
+              <img class="zoom-img" src="images/myphoto.png" alt="Hover to Zoom" />
                 style="object-fit:cover; width:280px; height:280px; border-radius:50%;">
             </td>
           </tr>
@@ -195,7 +204,7 @@
             <p><strong>Title:</strong> Localization, Planning and Control Integration for a mobile robot</p>
             <p><em>Description:</em> Implemented a Particle Filter for precise robot localization and optimized PID and MPC controllers for accurate waypoint-based trajectory following.</p>
             <p>
-              <a href="https://github.com/Varad2607/Mobile-robotics" target="_blank">Code</a> |
+              <a href="https://github.com/Varad2607/Mobile-robotics" target="_blank">Code</a> 
             </p>
           </div>
         </div>
@@ -238,7 +247,7 @@
         <div style="display: flex; align-items: center; gap: 20px;">
           <img src="images/2021_ROBO.jpeg" alt="Competition 2 Image" style="width: 150px; height: auto; border-radius: 8px;">
           <div>
-            <p>< Robocon 2021</p>
+            <p> Robocon 2021</p>
             <p><em>Description:</em> Developed an AI-based solution for real-time traffic management and monitoring.</p>
             <p>
               <a href="https://drive.google.com/file/d/1S6QdVl4vQuGUR8rG7m57Z8O2G7Y720nq/view?usp=sharing" target="_blank">Report</a>
