@@ -65,15 +65,25 @@
       background-color: #ffffd0;
     }
     .zoom-img {
-      width: 300px;       /* Adjust width as needed */
-      height: 300px;      /* Adjust height as needed */
-      border-radius: 50%; /* Make it circular */
-      object-fit: cover;  /* Ensures the image covers the circular area */
       transition: transform 0.2s;
     }
-    /* Scale image on hover */
     .zoom-img:hover {
-      transform: scale(1.2); 
+      transform: scale(1.2);
+    }
+
+    /* Circular shape */
+    .circular-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* Rectangle shape */
+    .rect-img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
     }
   </style>
   <title>Varad Dhat</title>
@@ -104,7 +114,8 @@
             </td>
             <td width="28%">
               <!-- <img width="100%" src="images/myphoto.png" -->
-              <img class="zoom-img" width="100%" src="images/myphoto.png" alt="Hover to Zoom" />
+              <!-- <img class="zoom-img" width="100%" src="images/myphoto.png" alt="Hover to Zoom" /> -->
+              <img class="zoom-img circular-img" src="images/myphoto.png" alt="Circular Image 1" />
                
             </td>
           </tr>
